@@ -1,0 +1,66 @@
+<div class="flex justify-between gap-12">
+  <div class="flex flex-col justify-between">
+    <h3 class="text-primary text-3xl">
+      <span class="text-primary-modified">Хватит думать!</span> Доставим заказ
+      за 30 минут!
+    </h3>
+    <p class="text-primary">
+      Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления
+      заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ
+      бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим
+      сервисом и сделаем всё, чтобы наш клиент был доволен и не остался
+      голодный!
+    </p>
+  </div>
+  <form
+    class="flex flex-col justify-end gap-6 w-full"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+  >
+    <input
+      forbiddenInput
+      type="text"
+      placeholder="Ваше имя"
+      formControlName="name"
+      class="border-2 border-solid border-primary py-3 px-4 text-base"
+      [ngClass]="{
+        'border-red-600':
+          form.controls['name'].invalid && form.controls['name'].touched
+      }"
+    />
+    <input
+      type="text"
+      placeholder="Адрес доставки"
+      formControlName="address"
+      class="border-2 border-solid border-primary py-3 px-4 text-base"
+      [ngClass]="{
+        'border-red-600':
+          form.controls['address'].invalid && form.controls['address'].touched
+      }"
+    />
+    <input
+      type="number"
+      placeholder="телефон"
+      formControlName="phone"
+      class="border-2 border-solid border-primary py-3 px-4 text-base"
+      [ngClass]="{
+        'border-red-600':
+          form.controls['phone'].invalid && form.controls['phone'].touched
+      }"
+    />
+    <button
+      class="bg-primary-modified py-3 text-base disabled:bg-gray-300 animate-pulse disabled:animate-none duration-300"
+      type="submit"
+      [disabled]="form.invalid || submitted"
+    >
+      Оформить заказ
+    </button>
+  </form>
+  <div class="basis-full">
+    <img
+      src="/assets/images/pizzzzza.png"
+      alt="yummy"
+      class="object-contain h-full"
+    />
+  </div>
+</div>

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Muller";
+    font-weight: 400;
+    src: url(assets/fonts/MullerNarrowDemo-Light.otf) format("opentype");
+  }
+  @font-face {
+    font-family: "Muller";
+    font-weight: 400;
+    font-style: italic;
+    src: url(assets/fonts/MullerNarrowDemo-LightItalic.otf) format("opentype");
+  }
+  @font-face {
+    font-family: "Muller";
+    font-weight: 700;
+    font-style: italic;
+    src: url(assets/fonts/MullerNarrowDemo-ExtraBoldItalic.otf)
+      format("opentype");
+  }
+  @font-face {
+    font-family: "Muller";
+    font-weight: 700;
+    src: url(assets/fonts/MullerDemo-ExtraBold.otf) format("opentype");
+  }
+  html {
+    font-family: "Muller", "Arial", "sans-serif";
+  }
+}
+
+.container {
+  @apply w-3/4 mx-auto;
+}

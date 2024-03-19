@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="flex justify-between items-center mt-24 gap-4 max-md:flex-col">
+    <div>
+      <div class="text-4xl tracking-wider">
+        <h1 class="text-primary">Самая вкусная пицца в мире</h1>
+        <h1 class="text-primary-modified">
+          только в {{ environemnt.BRAND_NAME }}
+        </h1>
+      </div>
+      <div class="grid grid-cols-2 mt-12 gap-8 max-md:grid-cols-1">
+        <div class="flex items-start gap-2">
+          <img
+            src="/assets/images/hop.png"
+            alt="лучшее тесто"
+            class="w-10 object-contain"
+          />
+          <div>
+            <h4 class="text-primary-modified text-base uppercase">
+              Лучшее тесто
+            </h4>
+            <p class="text-primary text-base">
+              Мы создаем тесто только из отборной итальянской муки наивысшего
+              качества
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <img
+            src="/assets/images/kitchen-pack.png"
+            alt="Лучшии повара"
+            class="w-10 object-contain"
+          />
+          <div>
+            <h4 class="text-primary-modified text-base uppercase">
+              Лучшии повара
+            </h4>
+            <p class="text-primary text-base">
+              Пиццы готовят самые профессиональные итальянские повара
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <img
+            src="/assets/images/seo-and-web.png"
+            alt="гарантия качества"
+            class="w-10 object-contain"
+          />
+          <div>
+            <h4 class="text-primary-modified text-base uppercase">
+              гарантия качества
+            </h4>
+            <p class="text-primary text-base">
+              Наша пиццерия получила множество наград и признаний по всему миру
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <img
+            src="/assets/images/holidays.png"
+            alt="отборные рецепты"
+            class="w-10 object-contain"
+          />
+          <div>
+            <h4 class="text-primary-modified text-base uppercase">
+              отборные рецепты
+            </h4>
+            <p class="text-primary text-base">
+              Мы используем рецепты от мировых лидеров в изготовлении пиццы
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8">
+        <button class="bg-primary-modified py-3 px-6 text-base max-md:w-full">
+          Выбрать пиццу
+        </button>
+      </div>
+    </div>
+    <div class="max-md:w-1/2 max-md:mt-8">
+      <img src="/assets/images/favourite.png" alt="the best our pissa" />
+    </div>
+  </div>
+  <app-product-list></app-product-list>
+  <div class="mt-36 mb-12">
+    <app-contact></app-contact>
+  </div>
+</div>
